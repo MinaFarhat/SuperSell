@@ -1,18 +1,16 @@
+// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names
+
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supersell/controller/app_language.dart';
 import 'package:supersell/home%20screen.dart';
 import 'package:supersell/supersell11.dart';
 import 'package:supersell/supersell6.dart';
 import 'package:supersell/supersell8.dart';
-import 'translation.dart';
 class Supersell5 extends StatefulWidget{
   const Supersell5({Key? key}) : super(key: key);
 
@@ -25,7 +23,6 @@ class _Supersell5State extends State<Supersell5>
 { 
     XFile? _image;
    final ImagePicker _picker=ImagePicker();
-   String _selectlang = 'en';
   String ? _imagepath;
   @override
   void initState() {
@@ -40,11 +37,11 @@ class _Supersell5State extends State<Supersell5>
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text('Remon',style: TextStyle(fontSize: 25,fontStyle:FontStyle.italic,color: Colors.black,)),
-             accountEmail: Text('Remon.com',style:TextStyle(fontSize: 25,color: Colors.black ,fontStyle: FontStyle.italic)),
+            accountName: const Text('Remon',style: TextStyle(fontSize: 25,fontStyle:FontStyle.italic,color: Colors.black,)),
+             accountEmail: const Text('Remon.com',style:TextStyle(fontSize: 25,color: Colors.black ,fontStyle: FontStyle.italic)),
              
              currentAccountPicture:imageprofile(),
-             decoration: BoxDecoration(
+             decoration: const BoxDecoration(
                color: Colors.pink,
                image: DecorationImage(
                  image: AssetImage(
@@ -58,7 +55,7 @@ class _Supersell5State extends State<Supersell5>
                leading: Icon(Icons.favorite,color: Colors.pink[700],),
                title: Text(
                  "Favorirs".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
@@ -69,19 +66,19 @@ class _Supersell5State extends State<Supersell5>
                leading: Icon(Icons.production_quantity_limits_sharp,color: Colors.blue[700],),
                title: Text(
                  "prudects".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
                onTap: ()=>{
-                Get.to(()=>SuperSell6())
+                Get.to(()=>const SuperSell6())
                },
              ),
              ListTile(
                leading: Icon(Icons.notifications,color:Colors.pink[700] ),
                title: Text(
                  "Request".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
@@ -91,7 +88,7 @@ class _Supersell5State extends State<Supersell5>
                    color: Colors.red,
                    width: 20,
                    height: 20,
-                   child: Center(
+                   child: const Center(
                      child: Text(
                       '0',
                       style: TextStyle(
@@ -104,12 +101,12 @@ class _Supersell5State extends State<Supersell5>
                  ),
                ),
              ),
-             Divider(),
+             const Divider(),
              ListTile(
                leading: Icon(Icons.language,color: Colors.blue[700],),
                title: Text(
                  "Language".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
@@ -118,7 +115,7 @@ class _Supersell5State extends State<Supersell5>
                   init: Applanguage(),
                   builder: (controller) {
                     return DropdownButton(
-                     items: [
+                     items: const [
                        DropdownMenuItem(
                         child: Text('EN'),
                         value: 'en',
@@ -141,41 +138,41 @@ class _Supersell5State extends State<Supersell5>
                leading: Icon(Icons.account_circle_rounded,color: Colors.blue[700],),
                title: Text(
                  "Account".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
                onTap: ()=>{
-                 Get.to(()=>Supersell11())
+                 Get.to(()=>const Supersell11())
                },
              ),
              ListTile(
                leading: Icon(Icons.logout,color:Colors.blue[700],),
                title: Text(
                  "LogOut".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                    fontStyle:FontStyle.italic,
                  ),
                  ),
                onTap: ()=>{
-                 Get.offAll(Homescreen())
+                 Get.offAll(const Homescreen())
                },
              ),
-             Divider(),
+             const Divider(),
              TextButton.icon(
               onPressed: (){
-                Get.to(()=>Supersell8());
+                Get.to(()=>const Supersell8());
               },
                label: Text(
                  "AboutUs".tr,
-                 style: TextStyle(
+                 style: const TextStyle(
                    fontSize: 25,
                    fontWeight: FontWeight.bold,
                    fontStyle: FontStyle.italic,
                    color: Colors.indigo
                  ),
               ),
-              icon: Icon(
+              icon: const Icon(
                 Icons.adb_outlined,
                 size: 40,
               ),
@@ -193,7 +190,7 @@ class _Supersell5State extends State<Supersell5>
               ? CircleAvatar(backgroundImage:FileImage(File(_imagepath!)) ,radius:100.0 ,) 
                :CircleAvatar(
                  child:_image==null
-                 ?Image(image: AssetImage("lib/O.jpg"))
+                 ?const Image(image: AssetImage("lib/O.jpg"))
                  :Image(image: FileImage(File(_image!.path)),fit: BoxFit.fill,),
                  radius: 100.0,
                ),
@@ -224,19 +221,19 @@ class _Supersell5State extends State<Supersell5>
     return Container(
         height: 150.0,
         width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 20,
         ),
         child: Column(
           children: [
-            Text(
+            const Text(
               "Choose Profile Photo",
               style: TextStyle(
                 fontSize: 20.0,
               ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -251,7 +248,7 @@ class _Supersell5State extends State<Supersell5>
                      color: Colors.pink[700],
                      size: 30,
                      ),
-                   label:Text(
+                   label:const Text(
                      "Camera",
                      style: TextStyle(fontSize: 20,fontStyle:FontStyle.italic,color: Colors.black),
                      ),
@@ -260,12 +257,12 @@ class _Supersell5State extends State<Supersell5>
                   onPressed:(){
                     takephoto(ImageSource.gallery);
                   },
-                   icon:Icon(
+                   icon:const Icon(
                      Icons.image,
                      color: Colors.purple,
                      size: 30,
                    ),
-                   label:Text(
+                   label:const Text(
                      "Gallery",
                      style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.black),
                      ),
@@ -273,16 +270,16 @@ class _Supersell5State extends State<Supersell5>
               ],
             ),
              Padding(
-              padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
               child:TextButton.icon(
                 onPressed: (){
                   SaveImage(_image!.path);
                 },
-                label: Text(
+                label: const Text(
                   "Save",
                  style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.black),
                 ),
-                icon:Icon(
+                icon:const Icon(
                   Icons.save,
                   color: Colors.yellow,
                   size:30 ,

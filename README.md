@@ -1,16 +1,24 @@
-# supersell
+# SuperSell
 
-A new Flutter project.
+A Flutter e-commerce application for browsing and buying products.
+
+## Description
+
+SuperSell is a Flutter e-commerce app that lets users browse and buy products easily.  
+It features product listings, search, shopping cart, and checkout functionality, demonstrating Flutter UI design and state management.
+
+## Features
+
+- Browse products with images and descriptions
+- Search and filter products
+- Add products to shopping cart
+- Checkout functionality
+- Flutter UI and state management practice
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get a copy of the project up and running locally:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MinaFarhat/SuperSell.git

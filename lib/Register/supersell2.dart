@@ -1,15 +1,10 @@
-import 'dart:typed_data';
+// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names
+
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:supersell/Register/register_controller.dart';
 import 'package:supersell/home%20screen.dart';
-import 'package:supersell/login/supersell3.dart';
-import 'package:supersell/supersell4.dart';
-import 'package:supersell/supersell5.dart';
 class SuperSell extends StatefulWidget{
   const SuperSell({Key? key}) : super(key: key);
 
@@ -26,7 +21,7 @@ class _SuperSellState extends State <SuperSell>{
       return Scaffold(
         appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
         "Super Sell",
         style: TextStyle(color: Colors.white,
         fontSize: 30,
@@ -35,7 +30,7 @@ class _SuperSellState extends State <SuperSell>{
         ),
         backgroundColor:Colors.indigo,
         ),
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
          child:SingleChildScrollView(
          child: Stack(
@@ -43,7 +38,7 @@ class _SuperSellState extends State <SuperSell>{
             Column(
              children: [
                Image(
-                 image: AssetImage("lib/I.jpg",),
+                 image: const AssetImage("lib/I.jpg",),
                  fit: BoxFit.fitHeight,
                  
                  width: MediaQuery.of(
@@ -54,20 +49,20 @@ class _SuperSellState extends State <SuperSell>{
                  height: 40,
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                     onChanged:(Value) {
                      controller.username=Value;
                   } ,
                    decoration: InputDecoration(
                      border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "Username".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.blue[700],),
                     hintText: "Enter your name",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     icon: Icon(Icons.person_outline,
                     size: 25,
                     color: Colors.blue[400],
@@ -77,20 +72,20 @@ class _SuperSellState extends State <SuperSell>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                     onChanged:(Value) {
                      controller.email=Value;
                   } ,
                    decoration: InputDecoration(
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "E-mail".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.blue[700],),
                     hintText: "Enter your E-mail",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     icon: Icon(
                     Icons.alternate_email,
                     size: 25,
@@ -101,20 +96,20 @@ class _SuperSellState extends State <SuperSell>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                     onChanged:(Value) {
                      controller.password=Value;
                   } ,
                    decoration: InputDecoration(
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "Password".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.blue[700],),
                     hintText: "Enter your password",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     suffixIcon: IconButton(
                     onPressed: (){
                       setState(() {
@@ -133,7 +128,7 @@ class _SuperSellState extends State <SuperSell>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                     onChanged:(Value) {
                      controller.phonenumber=Value;
@@ -141,13 +136,13 @@ class _SuperSellState extends State <SuperSell>{
                    decoration: InputDecoration(
                      prefixText: "+963  ",
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "Phone Number".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.blue[700],),
                     hintText: "Enter your Phone Number",
-                    hintStyle: TextStyle(fontSize: 20,),
+                    hintStyle: const TextStyle(fontSize: 20,),
                     icon: Icon(
                     Icons.phone,
                     size: 25,
@@ -158,11 +153,11 @@ class _SuperSellState extends State <SuperSell>{
                  ),
                ),
                 Container(
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                  child: ElevatedButton(
                    child: Text(
                     "Sign up".tr,
-                   style: TextStyle(
+                   style: const TextStyle(
                     fontSize: 25,
                     height: 1,
                     fontStyle:FontStyle.italic,
@@ -173,14 +168,14 @@ class _SuperSellState extends State <SuperSell>{
                    registeronclick();
                    },
                    style:ButtonStyle(
-                     padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
-                     shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
+                     padding: WidgetStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
+                     shape: WidgetStateProperty.all(
+                      const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       //side: BorderSide(width: 2),
                       ),
                     ),
-                    backgroundColor: MaterialStateProperty.all(Colors.blue[400]),
+                    backgroundColor: WidgetStateProperty.all(Colors.blue[400]),
                    ),
                  ),
                ),
@@ -208,10 +203,10 @@ class _SuperSellState extends State <SuperSell>{
   await controller.registeronclick();
   if(controller.signupstatues){
     EasyLoading.showSuccess(controller.message);
-    Get.offAll(()=>Homescreen());
+    Get.offAll(()=>const Homescreen());
   }
   else{
-    EasyLoading.showError(controller.message,duration: Duration(seconds: 3),dismissOnTap: true);
+    EasyLoading.showError(controller.message,duration: const Duration(seconds: 3),dismissOnTap: true);
   }
 }
 }

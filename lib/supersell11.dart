@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:supersell/Register/supersell2.dart';
-import 'package:supersell/login/supersell3.dart';
 import 'package:supersell/supersell4.dart';
 class Supersell11 extends StatefulWidget{
   const Supersell11({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class _Supersell11State extends State <Supersell11>{
       return Scaffold(
         appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
         "Super Sell",
         style: TextStyle(color: Colors.white,
         fontSize: 30,
@@ -28,7 +26,7 @@ class _Supersell11State extends State <Supersell11>{
         ),
         backgroundColor:Colors.indigo,
         ),
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
          child:SingleChildScrollView(
          child: Stack(
@@ -36,7 +34,7 @@ class _Supersell11State extends State <Supersell11>{
             Column(
              children: [
                Image(
-                 image: AssetImage("lib/tt.jpg",),
+                 image: const AssetImage("lib/tt.jpg",),
                  fit: BoxFit.fitHeight,
                  
                  width: MediaQuery.of(
@@ -45,18 +43,18 @@ class _Supersell11State extends State <Supersell11>{
                ),
                
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                    decoration: InputDecoration(
                      border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "User Name",
-                    labelStyle: TextStyle(fontSize: 25,color: Colors.deepPurple,),
+                    labelStyle: const TextStyle(fontSize: 25,color: Colors.deepPurple,),
                     hintText: "Enter your name",
-                    hintStyle: TextStyle(fontSize: 20),
-                    icon: Icon(Icons.person_outline,
+                    hintStyle: const TextStyle(fontSize: 20),
+                    icon: const Icon(Icons.person_outline,
                     size: 25,
                     color: Colors.deepPurple,
                     ),
@@ -65,18 +63,18 @@ class _Supersell11State extends State <Supersell11>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                    decoration: InputDecoration(
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "E-mail",
-                    labelStyle: TextStyle(fontSize: 25,color: Colors.deepPurple,),
+                    labelStyle: const TextStyle(fontSize: 25,color: Colors.deepPurple,),
                     hintText: "Enter your E-mail",
-                    hintStyle: TextStyle(fontSize: 20),
-                    icon: Icon(
+                    hintStyle: const TextStyle(fontSize: 20),
+                    icon: const Icon(
                     Icons.alternate_email,
                     size: 25,
                     color: Colors.deepPurple,
@@ -86,17 +84,17 @@ class _Supersell11State extends State <Supersell11>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                    decoration: InputDecoration(
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20),
+                       borderSide: const BorderSide(width: 20),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "Password",
-                    labelStyle: TextStyle(fontSize: 25,color: Colors.deepPurple,),
+                    labelStyle: const TextStyle(fontSize: 25,color: Colors.deepPurple,),
                     hintText: "Enter your password",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     suffixIcon: IconButton(
                     onPressed: (){
                       setState(() {
@@ -115,19 +113,19 @@ class _Supersell11State extends State <Supersell11>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextField(
                    decoration: InputDecoration(
                      prefixText: "+963  ",
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20),
+                       borderSide: const BorderSide(width: 20),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "Phone Number",
-                    labelStyle: TextStyle(fontSize: 25,color: Colors.deepPurple,),
+                    labelStyle: const TextStyle(fontSize: 25,color: Colors.deepPurple,),
                     hintText: "Enter your Phone Number",
-                    hintStyle: TextStyle(fontSize: 20,),
-                    icon: Icon(
+                    hintStyle: const TextStyle(fontSize: 20,),
+                    icon: const Icon(
                     Icons.phone,
                     size: 25,
                     color: Colors.deepPurple,
@@ -137,9 +135,9 @@ class _Supersell11State extends State <Supersell11>{
                  ),
                ),
                 Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: ElevatedButton.icon(
-                   label: Text("Edit",
+                   label: const Text("Edit",
                    style: TextStyle(
                     fontSize: 30,
                     height: 1,
@@ -147,23 +145,23 @@ class _Supersell11State extends State <Supersell11>{
                     color: Colors.white,
                     ),
                    ),
-                   icon: Icon(
+                   icon: const Icon(
                      Icons.edit,
                      color: Colors.white,
                      size: 40,
                    ),
                    onPressed: (){
-                    Get.offAll(()=>Supersell4());
+                    Get.offAll(()=>const Supersell4());
                    },
                    style:ButtonStyle(
-                     padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
-                     shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
+                     padding: WidgetStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
+                     shape: WidgetStateProperty.all(
+                      const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       //side: BorderSide(width: 2),
                       ),
                     ),
-                    backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+                    backgroundColor: WidgetStateProperty.all(Colors.deepPurple),
                    ),
                  ),
                ),

@@ -5,14 +5,11 @@ class Applanguage extends GetxController{
  var applocal ='ar';
  @override
   void onInit() async{
-    // TODO: implement onInit
     super.onInit();
 
     Localstorage localstorage = Localstorage();
 
-    applocal= await localstorage.languageSelected == null
-    ?'ar'
-    :await localstorage.languageSelected;
+    applocal= await localstorage.languageSelected;
     Get.updateLocale(Locale(applocal));
     update();
     

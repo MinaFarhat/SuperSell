@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+
+// ignore_for_file: avoid_print, camel_case_types
 
 class prudect_details{
   final String name;

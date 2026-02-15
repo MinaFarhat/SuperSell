@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:get/get.dart';
 
 class Range extends StatefulWidget {
   const Range({ Key? key }) : super(key: key);
@@ -11,15 +8,15 @@ class Range extends StatefulWidget {
 }
 
 class _RangeState extends State<Range> {
-RangeValues values = RangeValues(0,100);
+RangeValues values = const RangeValues(0,100);
 final double min=0;
 final double max=100;
   @override
   Widget build(BuildContext context) => SliderTheme(
       data: SliderThemeData(
         trackHeight:10 ,
-        rangeThumbShape: RoundRangeSliderThumbShape(enabledThumbRadius: 15),
-        overlayShape: RoundSliderOverlayShape(overlayRadius: 40),
+        rangeThumbShape: const RoundRangeSliderThumbShape(enabledThumbRadius: 15),
+        overlayShape: const RoundSliderOverlayShape(overlayRadius: 40),
         overlayColor:Colors.black12,
         thumbColor: Colors.black,
   
@@ -53,11 +50,11 @@ final double max=100;
   );
   Widget buildSideLabel(double value)
   {
-    return Container(
+    return SizedBox(
       width: 50,
       child: Text(
        value.round().toString(),
-       style:TextStyle(
+       style:const TextStyle(
          fontSize: 18,
          fontWeight: FontWeight.bold,
          color: Colors.blue

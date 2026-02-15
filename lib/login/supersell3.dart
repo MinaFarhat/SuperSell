@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:supersell/supersell4.dart';
-import 'package:supersell/supersell5.dart';
 import 'package:get/get.dart';
 import 'package:supersell/supersell9.dart';
-import 'package:http/http.dart' as http;
 import 'package:supersell/login/login_controller.dart';
-import 'package:supersell/login/login_binding.dart';
 
 class SuperSell3 extends StatefulWidget{
  const SuperSell3({Key? key}) : super(key: key);
@@ -28,7 +25,7 @@ class _SuperSell3State extends State<SuperSell3>{
   return Scaffold(
     appBar: AppBar(
       centerTitle: true,
-       title: Text(
+       title: const Text(
         "Super Sell",
         style: TextStyle(color: Colors.white,
         fontSize: 30,
@@ -37,7 +34,7 @@ class _SuperSell3State extends State<SuperSell3>{
         ),
         backgroundColor:Colors.indigo,
         ),
-        body:Container(
+        body:SizedBox(
           height: double.infinity,
          child:SingleChildScrollView(
          child: Stack(
@@ -55,7 +52,7 @@ class _SuperSell3State extends State<SuperSell3>{
                  height: 40,
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextFormField(
                    onChanged:(Value) {
                      controller.email=Value;
@@ -63,13 +60,13 @@ class _SuperSell3State extends State<SuperSell3>{
                    
                    decoration: InputDecoration(
                      border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText: "E-mail".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.pink[700]),
                     hintText: "Enter your E-mail",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     icon: Icon(Icons.alternate_email,
                     color: Colors.pink[700],
                     ),
@@ -78,20 +75,20 @@ class _SuperSell3State extends State<SuperSell3>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: TextFormField(
                    onChanged:(Value) {
                      controller.password=Value;
                   } ,
                    decoration: InputDecoration(
                       border: OutlineInputBorder(
-                       borderSide: BorderSide(width: 20,color: Colors.blueGrey),
+                       borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
                        borderRadius: BorderRadius.circular(50.0),
                      ),
                     labelText:"Password".tr,
                     labelStyle: TextStyle(fontSize: 25,color: Colors.pink[700]),
                     hintText: "Enter your password",
-                    hintStyle: TextStyle(fontSize: 20),
+                    hintStyle: const TextStyle(fontSize: 20),
                     suffixIcon: IconButton(
                     onPressed: (){
                       setState(() {
@@ -109,11 +106,11 @@ class _SuperSell3State extends State<SuperSell3>{
                  ),
                ),
                Container(
-                 margin: EdgeInsets.all(8.0),
+                 margin: const EdgeInsets.all(8.0),
                  child: ElevatedButton(
                    child: Text(
                      "Log in".tr,
-                   style: TextStyle(
+                   style: const TextStyle(
                     fontSize: 25,
                     height:1,
                     fontStyle:FontStyle.italic,
@@ -124,30 +121,30 @@ class _SuperSell3State extends State<SuperSell3>{
                      onClickLogin() ;
                    },
                    style:ButtonStyle(
-                     padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
-                     shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
+                     padding: WidgetStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
+                     shape: WidgetStateProperty.all(
+                      const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                      
                       ),
                     ),
-                    backgroundColor: MaterialStateProperty.all(Colors.pink[700]),
+                    backgroundColor: WidgetStateProperty.all(Colors.pink[700]),
                    ),
                  ),
                ),
                TextButton.icon(
                 onPressed: (){
                   
-                  Get.to(()=>Supersell9());
+                  Get.to(()=>const Supersell9());
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.emoji_food_beverage_outlined,
                   size: 32,
                   color: Colors.indigo,
                 ),
                 label: Text(
                   "Forgot Password".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold,
@@ -176,12 +173,12 @@ class _SuperSell3State extends State<SuperSell3>{
   await controller.loginonclick();
   if(controller.signupstatues){
     EasyLoading.showSuccess(controller.message);
-    Get.offAll(()=>Supersell4());
+    Get.offAll(()=>const Supersell4());
   }
   else{
     EasyLoading.showError(
     controller.message,
-    duration: Duration(seconds: 3),
+    duration: const Duration(seconds: 3),
     dismissOnTap: true
     );
   }

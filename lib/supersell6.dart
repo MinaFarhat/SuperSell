@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supersell/supersell7.dart';
@@ -14,7 +13,7 @@ class _SuperSell6Satate extends State <SuperSell6>{
    return Scaffold(
      appBar:AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
         "Super Sell",
         style: TextStyle(color: Colors.white,
         fontSize: 30,
@@ -25,24 +24,24 @@ class _SuperSell6Satate extends State <SuperSell6>{
         ),
         floatingActionButton:FloatingActionButton(
           
-          child: Icon(
+          child: const Icon(
             Icons.add_circle,
             size: 40,
             ),
             backgroundColor: Colors.blue,
           onPressed: (){
-            Get.to(Supersell7());
+            Get.to(const Supersell7());
           },
         ) ,
         body:Container (
                  height: double.infinity,
-             decoration: BoxDecoration(
+             decoration: const BoxDecoration(
             image: DecorationImage(
               image:AssetImage("lib/M3.jpg"),
               fit: BoxFit.cover,
                )
           ),
-            child: SingleChildScrollView(
+            child: const SingleChildScrollView(
               child: Center(
                 child: Column(
                   

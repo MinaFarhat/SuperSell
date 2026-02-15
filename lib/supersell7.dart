@@ -1,10 +1,8 @@
+// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names
+
 import 'dart:io';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
@@ -21,7 +19,6 @@ class _Supersell7 extends State<Supersell7>{
    var b=Colors.black;
    var t = Colors.teal;
    var u =Colors.blue;
-   DateTime? _dateTime;
    final item =['Medicines'.tr,'Canned food'.tr,'Foods'.tr,'tools'.tr];
    String ? value;
    DateTime ?d1;
@@ -33,7 +30,7 @@ class _Supersell7 extends State<Supersell7>{
     return Scaffold(
       appBar: AppBar(
       centerTitle: true,
-       title: Text(
+       title: const Text(
         "Super Sell",
         style: TextStyle(color: Colors.white,
         fontSize: 30,
@@ -45,7 +42,7 @@ class _Supersell7 extends State<Supersell7>{
     body: Center(
       child: SingleChildScrollView(
           child: Container(
-             decoration:BoxDecoration(
+             decoration:const BoxDecoration(
               image: DecorationImage(
               image: AssetImage("lib/b1.jpg"),
               fit: BoxFit.cover,
@@ -56,17 +53,17 @@ class _Supersell7 extends State<Supersell7>{
                  Column(
                     children: [
                    Container(
-                       margin: EdgeInsets.all(8.0),
+                       margin: const EdgeInsets.all(8.0),
                        child: TextField(
                          decoration: InputDecoration(
                            border: OutlineInputBorder(
-                             borderSide: BorderSide(width: 20,color: Colors.teal),
+                             borderSide: const BorderSide(width: 20,color: Colors.teal),
                              borderRadius: BorderRadius.circular(50.0),
                            ),
                           labelText: "Username".tr,
                           labelStyle: TextStyle(fontSize: 25,color: b,),
                           hintText: "Enter your name",
-                          hintStyle: TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
+                          hintStyle: const TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
                           icon: Icon(Icons.person_outline,
                           size: 25,
                           color:u,
@@ -75,21 +72,21 @@ class _Supersell7 extends State<Supersell7>{
                         keyboardType: TextInputType.text,
                        ),
                      ),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Container(
-                       margin: EdgeInsets.all(8.0),
+                       margin: const EdgeInsets.all(8.0),
                        child: TextField(
                          decoration: InputDecoration(
                            border: OutlineInputBorder(
-                             borderSide: BorderSide(width: 20,color: Colors.teal),
+                             borderSide: const BorderSide(width: 20,color: Colors.teal),
                              borderRadius: BorderRadius.circular(50.0),
                            ),
                           labelText:"Name of prudect".tr,
                           labelStyle: TextStyle(fontSize: 25,color:b,),
                           hintText: "Enter your name is prudect",
-                          hintStyle: TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
+                          hintStyle: const TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
                           icon: Icon(Icons.content_paste_rounded,
                           size: 25,
                           color: u,
@@ -98,16 +95,16 @@ class _Supersell7 extends State<Supersell7>{
                         keyboardType: TextInputType.text,
                        ),
                      ),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Datetime(),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Container(
-                        margin: EdgeInsets.all(16),
-                        padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                        margin: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 4),
                         decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: u,),
@@ -126,11 +123,11 @@ class _Supersell7 extends State<Supersell7>{
                           ),
                         ) ,
                       ),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Container(
-                     margin: EdgeInsets.all(8.0),
+                     margin: const EdgeInsets.all(8.0),
                      child: TextField(
                        decoration: InputDecoration(
                          prefixText: "+963  ",
@@ -141,7 +138,7 @@ class _Supersell7 extends State<Supersell7>{
                         labelText: "Phone Number".tr,
                         labelStyle: TextStyle(fontSize: 25,color:b,),
                         hintText: "Enter your Phone Number",
-                        hintStyle: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
+                        hintStyle: const TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
                         icon: Icon(
                         Icons.phone,
                         size: 25,
@@ -151,11 +148,11 @@ class _Supersell7 extends State<Supersell7>{
                       keyboardType: TextInputType.phone,
                      ),
                    ),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Container(
-                     margin: EdgeInsets.all(8.0),
+                     margin: const EdgeInsets.all(8.0),
                      child: TextField(
                        decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -165,7 +162,7 @@ class _Supersell7 extends State<Supersell7>{
                         labelText: "Quantity".tr,
                         labelStyle: TextStyle(fontSize: 25,color:b,),
                         hintText: "Enter your quantity",
-                        hintStyle: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
+                        hintStyle: const TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
                         icon: Icon(
                         Icons.production_quantity_limits,
                         size: 25,
@@ -175,11 +172,11 @@ class _Supersell7 extends State<Supersell7>{
                       keyboardType: TextInputType.number,
                      ),
                    ),
-                   Divider(
+                   const Divider(
                      color: Colors.black,
                    ),
                    Container(
-                     margin: EdgeInsets.all(8.0),
+                     margin: const EdgeInsets.all(8.0),
                      child: TextField(
                        decoration: InputDecoration(
                          suffixText: "Dollar             ",
@@ -190,7 +187,7 @@ class _Supersell7 extends State<Supersell7>{
                         labelText:"The price".tr,
                         labelStyle: TextStyle(fontSize: 25,color:b,),
                         hintText: "Enter your price for one",
-                        hintStyle: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
+                        hintStyle: const TextStyle(fontSize: 20,fontStyle: FontStyle.italic,),
                         icon: Icon(
                         Icons.price_change_outlined,
                         size: 25,
@@ -200,138 +197,129 @@ class _Supersell7 extends State<Supersell7>{
                       keyboardType: TextInputType.number,
                      ),
                    ),
-                   Container(
-
-                     child: Column(
-                      children: [
-                         
-                        SizedBox(
-                          height: 100,
-                          child: Text(
-                          "Percentage X days before expiration".tr,
-                          style: TextStyle(
-                          fontSize: 25,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.bold,
-                          ),
-                          ),
+                   Column(
+                    children: [
+                       
+                      SizedBox(
+                        height: 100,
+                        child: Text(
+                        "Percentage X days before expiration".tr,
+                        style: const TextStyle(
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
                         ),
-
-                        TextField(
-                          decoration: InputDecoration(
-                         //suffixText: "Dollar             ",
-                          border: OutlineInputBorder(
-                           borderSide: BorderSide(width: 20,color:t),
-                           borderRadius: BorderRadius.circular(50.0,),
-                          ),
-                          label: Text("the number of days"),
-                          labelStyle: TextStyle(fontSize: 25,color:b,),
-                         ),
                         ),
-                        Range(),
-                      ],
-                    ),
-                   ),
-                   Container(
-                     child: Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          child: Text(
-                          "Percentage X days before expiration".tr,
-                          style: TextStyle(
-                          fontSize: 25,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.bold,
-                          ),
-                          ),
+                      ),
+                   
+                      TextField(
+                        decoration: InputDecoration(
+                       //suffixText: "Dollar             ",
+                        border: OutlineInputBorder(
+                         borderSide: BorderSide(width: 20,color:t),
+                         borderRadius: BorderRadius.circular(50.0,),
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                         //suffixText: "Dollar             ",
-                          border: OutlineInputBorder(
-                           borderSide: BorderSide(width: 20,color:t),
-                           borderRadius: BorderRadius.circular(50.0,),
-                          ),
-                          label: Text("the number of days"),
-                          labelStyle: TextStyle(fontSize: 25,color:b,),
-                         ),
+                        label: const Text("the number of days"),
+                        labelStyle: TextStyle(fontSize: 25,color:b,),
+                       ),
+                      ),
+                      const Range(),
+                    ],
+                                       ),
+                   Column(
+                    children: [
+                      SizedBox(
+                        height: 100,
+                        child: Text(
+                        "Percentage X days before expiration".tr,
+                        style: const TextStyle(
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
                         ),
-                        Range(),
-                      ],
-                    ),
-                   ),
-                   Container(
-                     child: Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          child: Text(
-                          "Except that".tr,
-                          style: TextStyle(
-                          fontSize: 25,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.bold,
-                          ),
-                          ),
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                         //suffixText: "Dollar             ",
-                          border: OutlineInputBorder(
-                           borderSide: BorderSide(width: 20,color:t),
-                           borderRadius: BorderRadius.circular(50.0,),
-                          ),
-                          label: Text("the number of days"),
-                          labelStyle: TextStyle(fontSize: 25,color:b,),
-                         ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                       //suffixText: "Dollar             ",
+                        border: OutlineInputBorder(
+                         borderSide: BorderSide(width: 20,color:t),
+                         borderRadius: BorderRadius.circular(50.0,),
                         ),
-                        Range(),
-                      ],
-                    ),
-                   ),
-                    Divider(
+                        label: const Text("the number of days"),
+                        labelStyle: TextStyle(fontSize: 25,color:b,),
+                       ),
+                      ),
+                      const Range(),
+                    ],
+                                       ),
+                   Column(
+                    children: [
+                      SizedBox(
+                        height: 100,
+                        child: Text(
+                        "Except that".tr,
+                        style: const TextStyle(
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                       //suffixText: "Dollar             ",
+                        border: OutlineInputBorder(
+                         borderSide: BorderSide(width: 20,color:t),
+                         borderRadius: BorderRadius.circular(50.0,),
+                        ),
+                        label: const Text("the number of days"),
+                        labelStyle: TextStyle(fontSize: 25,color:b,),
+                       ),
+                      ),
+                      const Range(),
+                    ],
+                                       ),
+                    const Divider(
                      color: Colors.black,
                    ),
                    SizedBox(
                      child: imageprofile(),
                 
                    ),
-                  Divider(
+                  const Divider(
                      color: Colors.black,
                    ),
-                             Container(
-                   child: Container(
-                     width: double.infinity,
-                        
-                     child:ElevatedButton.icon(
-                     onPressed: (){} ,
-                      label : Text(
-                          "Send".tr,
-                         style: TextStyle(
-                         fontStyle: FontStyle.italic,
-                           fontSize: 25,
-                           height: 1,
-                           color: u,
-                           )
-                     ),
-                     icon: Icon(
-                       Icons.send_outlined,
-                       color: u,
-                       size: 40,
-                     ),
-                    style:ButtonStyle(
-                    padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
-                    shape: MaterialStateProperty.all(
-                     RoundedRectangleBorder(
-                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                     ),
-                   ),
-                   backgroundColor: MaterialStateProperty.all(b),
-                  ), 
-                     ),
-                   )
-                  ),
+                             SizedBox(
+                               width: double.infinity,
+                                  
+                               child:ElevatedButton.icon(
+                               onPressed: (){} ,
+                                label : Text(
+                                    "Send".tr,
+                                   style: TextStyle(
+                                   fontStyle: FontStyle.italic,
+                                     fontSize: 25,
+                                     height: 1,
+                                     color: u,
+                                     )
+                               ),
+                               icon: Icon(
+                                 Icons.send_outlined,
+                                 color: u,
+                                 size: 40,
+                               ),
+                              style:ButtonStyle(
+                              padding: WidgetStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
+                              shape: WidgetStateProperty.all(
+                               const RoundedRectangleBorder(
+                               borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                               ),
+                             ),
+                             backgroundColor: WidgetStateProperty.all(b),
+                                               ), 
+                               ),
+                             ),
                   ],
                   ),
               ],
@@ -346,7 +334,7 @@ DropdownMenuItem<String> buildMenuItem(String item) =>DropdownMenuItem(
   value: item,
   child: Text(
     item,
-    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+    style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
   ),
   );
 
@@ -355,27 +343,27 @@ Widget imageprofile()
      return Center(
          child: Column(
            children: [
-             Container(
+             SizedBox(
                height: 250,
                child:_image==null
-                 ?Image(image: AssetImage("lib/LL.jpg"))
+                 ?const Image(image: AssetImage("lib/LL.jpg"))
                  :Image(image: FileImage(File(_image!.path)),fit: BoxFit.fill,alignment: Alignment.topLeft,),
              ),
                  Padding(
-                   padding: EdgeInsets.symmetric(
+                   padding: const EdgeInsets.symmetric(
                      horizontal: 10,
                      vertical: 10,
                    ),
                    child: ElevatedButton.icon(
                     style:ButtonStyle(
-                  padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
-                  shape: MaterialStateProperty.all(
-                   RoundedRectangleBorder(
+                  padding: WidgetStateProperty.all(const EdgeInsets.fromLTRB(100, 5, 100, 5)),
+                  shape: WidgetStateProperty.all(
+                   const RoundedRectangleBorder(
                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
                    //side: BorderSide(width: 2),
                    ),
                  ),
-                 backgroundColor: MaterialStateProperty.all(b),
+                 backgroundColor: WidgetStateProperty.all(b),
                 ), 
                      onPressed:(){
                         showModalBottomSheet(
@@ -408,19 +396,19 @@ Widget imageprofile()
     return Container(
         height: 100.0,
         width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 20,
         ),
         child: Column(
           children: [
-            Text(
+            const Text(
               "Choose Profile Photo",
               style: TextStyle(
                 fontSize: 20.0,
               ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -435,7 +423,7 @@ Widget imageprofile()
                      color: Colors.blue[700],
                      size: 30,
                      ),
-                   label:Text(
+                   label:const Text(
                      "Camera",
                      style: TextStyle(fontSize: 20,fontStyle:FontStyle.italic,color: Colors.black),
                      ),
@@ -449,7 +437,7 @@ Widget imageprofile()
                      color: Colors.blue[700],
                      size: 30,
                    ),
-                   label:Text(
+                   label:const Text(
                      "Gallery",
                      style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.black),
                      ),
@@ -476,43 +464,41 @@ Widget Datetime()
     'dd-MM-yyyy hh:mm a',
   );
   return Center(
-    child: Container(
-       child: Padding(
-         padding: EdgeInsets.all(16.0),
-         child:DateTimeField(
-           format: format,
-           decoration: InputDecoration(
-             border: OutlineInputBorder(
-            borderSide: BorderSide(width: 20,color: Colors.blueGrey),
-            borderRadius: BorderRadius.circular(50.0),
-            ),
-           labelText:"Expiration date".tr,
-           labelStyle: TextStyle(fontSize: 25,color: b,),
-           icon: Icon(Icons.date_range_outlined,
-                    size: 25,
-                    color: u,
-          ),
-          ),
-           onShowPicker: (context,currentValue)async{
-           final date= await showDatePicker(
-             context: context,
-             initialDate: currentValue ?? DateTime.now(),
-             firstDate: DateTime(2020),
-            lastDate: DateTime(2030),
-          );
-          if(date != null){
-            final time = await showTimePicker(
-              context: context,
-              initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()));
-           return DateTimeField.combine(date, time);
-          }
-          else{
-               return currentValue;
-          }
-         }
+    child: Padding(
+      padding: const EdgeInsets.all(16.0),
+      child:DateTimeField(
+        format: format,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+         borderSide: const BorderSide(width: 20,color: Colors.blueGrey),
+         borderRadius: BorderRadius.circular(50.0),
          ),
+        labelText:"Expiration date".tr,
+        labelStyle: TextStyle(fontSize: 25,color: b,),
+        icon: Icon(Icons.date_range_outlined,
+                 size: 25,
+                 color: u,
+       ),
+       ),
+        onShowPicker: (context,currentValue)async{
+        final date= await showDatePicker(
+          context: context,
+          initialDate: currentValue ?? DateTime.now(),
+          firstDate: DateTime(2020),
+         lastDate: DateTime(2030),
+       );
+       if(date != null){
+         final time = await showTimePicker(
+           context: context,
+           initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()));
+        return DateTimeField.combine(date, time);
+       }
+       else{
+            return currentValue;
+       }
+      }
       ),
-    ),
+          ),
   );
 }
 }

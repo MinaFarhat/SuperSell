@@ -1,15 +1,9 @@
+// ignore_for_file: camel_case_types, must_be_immutable
+
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
 import 'package:like_button/like_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supersell/model.dart';
@@ -23,12 +17,12 @@ class Product {
    double ? price;
    String ? unit;
    Product(){
-     this.name=name;
-     this.id=id;
-     this.username=username;
-     this.image=image;
-     this.price=price;
-     this.unit=unit;
+     name=name;
+     id=id;
+     username=username;
+     image=image;
+     price=price;
+     unit=unit;
      
    }
   Product.fromJson(dynamic data){
@@ -54,11 +48,11 @@ class _Supersell4state extends State<Supersell4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Supersell5(),
+        drawer: const Supersell5(),
         appBar: AppBar(
           centerTitle: true,
           elevation: 0,
-          title: Text(
+          title: const Text(
             "Super Sell",
             style: TextStyle(
               color: Colors.white,
@@ -69,7 +63,7 @@ class _Supersell4state extends State<Supersell4> {
           backgroundColor: Colors.indigo,
         ),
         floatingActionButton: FloatingActionButton(
-          child:Icon(
+          child:const Icon(
                Icons.search,
                size: 30,
           ),
@@ -77,17 +71,8 @@ class _Supersell4state extends State<Supersell4> {
           backgroundColor: Colors.indigo,
         ),
         body: SingleChildScrollView(
-          child: Container(
-            /*decoration: BoxDecoration(
-              image: DecorationImage(
-                image:AssetImage("lib/M2.jpg"),
-                fit: BoxFit.fill,
-                 )
-            ),
-            */
-            child: Column(
-              children:[getl()]
-            ),
+          child: Column(
+            children:[getl()]
           ),
         ));
   }
@@ -103,9 +88,9 @@ class _Supersell4state extends State<Supersell4> {
          
        }
        else if(snapshot.hasError){
-         return Center(child: Text("erorr"),);
+         return const Center(child: Text("erorr"),);
        }
-       return CircularProgressIndicator();
+       return const CircularProgressIndicator();
      }
      );
  }
@@ -113,7 +98,7 @@ class _Supersell4state extends State<Supersell4> {
 }
 class SEE extends StatelessWidget {
 prudect_details p;
-SEE(this.p);
+SEE(this.p, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return  InkWell(
@@ -126,36 +111,36 @@ SEE(this.p);
               children: [
                Text(
               "Name of prudect:${p.name}".tr,
-              style: TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
+              style: const TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
               ),
               Text(
              "The price is:${p.price}",
-             style: TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
+             style: const TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
              ),
               Text(
              "The unit is:${p.unit}",
-             style: TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
+             style: const TextStyle(fontSize: 30,fontStyle:FontStyle.italic),
              ),
              ]
             ),
           ),
           Image(
-          image:NetworkImage('${p.image}'),
+          image:NetworkImage(p.image),
           fit: BoxFit.cover,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
           children:[
            LikeButton(
-             likeCountPadding:EdgeInsets.only(left: 12),
+             likeCountPadding:const EdgeInsets.only(left: 12),
              size: 50,
              isLiked: true,
              likeCount:4 ,
              countBuilder: (count,isLiked,text){
-               final color = Colors.indigo;
+               const color = Colors.indigo;
                return Text(
                  text,
-                 style: TextStyle(
+                 style: const TextStyle(
                    color: color,
                    fontSize: 24,
                    fontWeight: FontWeight.bold,
@@ -166,12 +151,12 @@ SEE(this.p);
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children: [
-               Padding(padding: EdgeInsets.all(8)),
+               const Padding(padding: EdgeInsets.all(8)),
                Text(
                  "View Count ${p.view}",
-                 style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.purple),
+                 style: const TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.purple),
               ),
-               Icon(
+               const Icon(
                 Icons.remove_red_eye_outlined,
                 size: 30,
 
@@ -180,7 +165,7 @@ SEE(this.p);
            )
           ],
           ),
-          Divider(
+          const Divider(
           color: Colors.black,
           ),
           ] ,
