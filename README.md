@@ -1,6 +1,6 @@
 # SuperSell
 
-A Flutter e-commerce application for browsing and buying products.
+**SuperSell** is a Flutter e-commerce application for browsing and buying products.
 
 ## Description
 
@@ -9,16 +9,27 @@ It features product listings, search, shopping cart, and checkout functionality,
 
 ## Features
 
-- Browse products with images and descriptions
-- Search and filter products
-- Add products to shopping cart
-- Checkout functionality
-- Flutter UI and state management practice
+- Browse products with images and descriptions  
+- Search and filter products  
+- Add products to shopping cart  
+- Checkout functionality  
+- Flutter UI and state management practice  
 
 ## Getting Started
 
-To get a copy of the project up and running locally:
+This project is built with Flutter and demonstrates e-commerce app functionality.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MinaFarhat/SuperSell.git
+### Prerequisites
+
+- Flutter SDK installed  
+- Dart  
+- An IDE like **VS Code** or **Android Studio**  
+
+### Installation
+
+1. Clone the repository and navigate into the project directory, then install dependencies and run the project:
+```bash
+git clone https://github.com/MenaFarhat/SuperSell.git
+cd SuperSell
+flutter pub get
+flutter run
